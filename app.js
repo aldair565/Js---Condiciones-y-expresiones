@@ -25,10 +25,40 @@ checkName(findName);
 
 //Part 3
 //Write a function that takes in a list of names. This function should compare the list taken into the names list you currently have. The function should pass back an array with the names that are in both lists.
+var listOfNamesToCompare = [];
+var comparedArray = [];
 
+function compareListOfNames (){
+    while (namesToCompare != "end"){
+        var namesToCompare = prompt("Enter a name, if you want to finish enter the word 'end'");
+        listOfNamesToCompare.push(namesToCompare);
+    }
+    listOfNamesToCompare.pop();
+    console.log(listOfNamesToCompare);
+
+    names.forEach((element) => {
+        listOfNamesToCompare.forEach((element2) => {
+            if (element == element2){
+                comparedArray.push(element);
+            }
+        });
+    });
+    console.log(comparedArray);
+}
+
+compareListOfNames();
 
 //Part 4
 //Write a function that takes in a list of names and returns a list of Integers with the length of the names in the same order as received. Hint use the push function
+function listToIntegers(names) {
+    let integers = [];
+    names.forEach((element) => {
+        integers.push(element.lenght);
+    });
+    console.log(integers);
+}
+
+listToIntegers(names);
 
 //Exercise #2
 //What do the following expressions evaluate to?
